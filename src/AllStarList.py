@@ -156,7 +156,7 @@ class AllStarList:
             print("The player can't be found!")
             return False
         
-        new_player = Player(new_player_name, new_player_url)
+        new_player = Player(new_player_name.title(), new_player_url)
         new_player_url_id = new_player.getPlayerUrlID()
         self.__star_list[new_player_url_id] = new_player
         self.__name_id[new_player_name.lower()] = new_player_url_id
@@ -167,7 +167,7 @@ class AllStarList:
                 new_p_info = info
                 new_p_info["object"] = new_player
                 exist_p_info = info
-                exist_p_info["name"] = new_player_name
+                exist_p_info["name"] = new_player_name.title()
                 exist_p_info["object"] = self.__star_list[player_id]
                 self.__star_list[player_id].updateTeammate(new_player_url_id, new_p_info)
                 self.__star_list[new_player_url_id].updateTeammate(player_id, exist_p_info)

@@ -59,7 +59,7 @@ class UserInterface:
                 cmd_succ = True
             
             elif user_resp == "disp_star":
-                self.dispStar()
+                is_exit = self.dispStar()
                 cmd_succ = True
 
             elif user_resp == "disp_stat":
@@ -71,11 +71,12 @@ class UserInterface:
                 cmd_succ = True
 
             elif user_resp == "find_min_deg":
-                self.findMinDeg()
+                is_exit = self.findMinDeg()
                 cmd_succ = True
             
             elif user_resp == "max_connect":
-                self.findMaxEdge()
+                is_exit = self.findMaxEdge()
+                cmd_succ = True
 
             else:
                 print("Command not found! Please check command list by \"help\".")
@@ -246,8 +247,8 @@ class UserInterface:
         cmd_succ = False
         is_back = False
         is_exit = False
-        print("Enter the year of all-star roster to be displayed: ", end="")
         while cmd_succ is False:
+            print("Enter the year of all-star roster to be displayed: ", end="")
             orig_user_resp = input()
             user_resp = orig_user_resp.strip().lower()
             if self.__isExit(user_resp):
