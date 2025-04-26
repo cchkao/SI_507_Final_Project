@@ -89,7 +89,7 @@ class UserInterface:
         print("")
         print("========================== Command List ==========================")
         print("-- add_player")
-        print("   Add a new player in the list for analyzer.")
+        print("   Add a new player in the list for network analyzer.")
         print("-- best_duo")
         print("   Find the best teammates for a specific player in the list.")
         print("-- comp_duo")
